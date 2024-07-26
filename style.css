@@ -1,60 +1,57 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 .container {
-    max-width: 960px;
+    width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 0 20px;
 }
-header {
+nav {
     background: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px 0;
     text-align: center;
-}
-header h1 {
-    margin: 0;
 }
 nav ul {
-    list-style: none;
-    background: rgba(0, 0, 0, 0.7);
-    text-align: center;
+    display: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 nav ul li {
     display: inline;
+    margin-right: 20px;
 }
 nav ul li a {
-    text-decoration: none;
     color: white;
-    padding: 15px 20px;
-    display: inline-block;
+    text-decoration: none;
 }
-nav ul li a:hover, nav ul li a:focus {
-    background-color: #555;
+.menu-icon {
+    display: none;
+    cursor: pointer;
 }
-main {
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px #ccc;
+.menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px auto;
 }
-main h2 {
-    color: #333;
-}
-section {
-    margin-bottom: 20px;
-}
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
-footer p {
-    margin: 0;
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul.hidden {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
